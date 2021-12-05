@@ -1,4 +1,4 @@
-FROM python:3.10-rc-buster
+FROM python:3.9
 WORKDIR /pytorch
 COPY . .
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt -i https://pypi.douban.com/simple
