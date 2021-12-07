@@ -4,7 +4,7 @@ WORKDIR /pytorch
 COPY . .
 # RUN pip install -r requirements.txt -i https://pypi.douban.com/simple
 RUN python -m pip install --upgrade pip
-RUN pip install -qr requirements.txt -f https://download.pytorch.org/whl/cpu/torch_stable.html
+RUN pip install -r requirements.txt -f https://download.pytorch.org/whl/cpu/torch_stable.html
 RUN pip install requests
 RUN mkdir -p /root/.config/Ultralytics
 RUN cp Arial.ttf /root/.config/Ultralytics
