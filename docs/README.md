@@ -2,6 +2,7 @@
 sudo docker build -t pumpkin-video:1.0 -f ./Dockerfile .
 
 sudo yum install git-lfs
+git lfs pull
 ```
 
 ```
