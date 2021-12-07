@@ -1,7 +1,9 @@
-# FROM python:3.9
-FROM pytorch/pytorch
+FROM python:3.9
+# FROM pytorch/pytorch
 WORKDIR /pytorch
 COPY . .
+RUN apt-get update
+RUN apt-get install libgl1-mesa-glx
 RUN pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
 # RUN python -m pip install --upgrade pip
 # RUN pip install -r requirements.txt -f https://download.pytorch.org/whl/cpu/torch_stable.html
